@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Taakin.Api;
 
 namespace Taakin.Host
 {
@@ -6,8 +9,17 @@ namespace Taakin.Host
     {
         public static void Main(string[] args)
         {
-            var stp = new Taakin.Api.Startup();
-            Console.WriteLine("Hello World!");
+            var contentRoot = Directory.GetCurrentDirectory();
+            var webRoot = Path.Combine("..", "app");
+
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(contentRoot)
+                .UseWebRoot(webRoot)
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
         }
     }
 }
