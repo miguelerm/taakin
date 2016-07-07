@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+project.lock.json
+
+node_modules/
+typings/
+
+src/app/styles/**/*.css
+src/app/scripts/**/*.js
+src/app/scripts/**/*.map
+
