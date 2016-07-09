@@ -2,16 +2,15 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "sh",
+    "command": "dotnet",
     "isShellCommand": true,
-    "args": ["-c"],
-    "showOutput": "always",
-    "suppressTaskName": true,
+    "args": [],
     "tasks": [
         {
             "taskName": "build",
-            "args": ["tsc -p ./app && dotnet build ./host"],
+            "args": [ ],
             "isBuildCommand": true,
+            "showOutput": "silent",
             "problemMatcher": "$msCompile"
         }
     ]
