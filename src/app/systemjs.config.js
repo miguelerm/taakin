@@ -30,6 +30,9 @@
         main: './main.js',
         defaultExtension: 'js'
       },
+      'app/layout': {
+        main: './index.js'
+      },
       rxjs: {
         defaultExtension: 'js'
       }

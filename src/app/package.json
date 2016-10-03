@@ -8,7 +8,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "styles": "node-sass styles/main.scss styles/main.css --source-map-embed --include-path node_modules/bootstrap-sass/assets/stylesheets/"
+    "styles": "node-sass styles/main.scss styles/main.css --source-map-embed --include-path node_modules/bootstrap-sass/assets/stylesheets/",
+    "build": "tsc && npm run styles"
   },
   "license": "ISC",
   "dependencies": {
